@@ -1,15 +1,16 @@
-# EJERCICIOS PARA APRENDER A USAR MONGODB
+# EJERCICIOS PARA PRACTICAR FUNCIONES Y OPERADORES DE MONGODB
 
 ## Operaciones CRUD
 ## Operaciones de consulta con `aggregate()`
+## Operdaores $match, $group, $lookup, $project, $sum y $sort
 
 ### LA BASE DE DATOS
 
 Simula 100 registros contables básicos de una empresa, conformada por dos colecciones:
 
-- **`librodiario`**: donde se encuentran todos los registros contables.
-- **`cuenta`**: donde se encuentran las cuentas.
-
+- **`librodiario`**: donde se encuentran todos los documentos con 100 registros contables random.
+- **`cuenta`**: donde se encuentran los nombres de las cuentas con su '_id', el cual tambien se encuentra como 'cuenta_id' en la coleccion **`librodiario`** .
+ 
 Los documentos en la colección `librodiario` fueron generados con la biblioteca Faker. Comparto el código a continuación:
 
 ```python
