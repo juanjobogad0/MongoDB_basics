@@ -1,4 +1,4 @@
-EJERCICOS PARA APRENDER A USAR MONGODB:
+#EJERCICOS PARA APRENDER A USAR MONGODB:
 
 1. Operaciones CRUD
 2. Opercaciones de consulta con aggregate()
@@ -22,7 +22,7 @@ from datetime import datetime
 
 fake = Faker("es_ES")  
 
-# Posibles valores para cuenta_id
+Posibles valores para cuenta_id
 cuenta_ids = [
     ObjectId("67b4d3c89f468d2d5ab9e97a"),
     ObjectId("67b4d3cd9f468d2d5ab9e97b"),
@@ -33,7 +33,7 @@ cuenta_ids = [
 ]
 
 
-# Función para generar un solo registro
+ Función para generar un solo registro
 def generate_record():
     fecha_str = fake.date_between(start_date="-5y", end_date="today").strftime(
         "%Y-%m-%d"
@@ -51,17 +51,17 @@ def generate_record():
     }
 
 
-# Generar 100 registros
+ Generar 100 registros
 records = [generate_record() for _ in range(100)]
 
-# Conectar a MongoDB (suponiendo que tienes MongoDB corriendo localmente)
+ Conectar a MongoDB (suponiendo que tienes MongoDB corriendo localmente)
 cliente = MongoClient(
     "mongodb://localhost:27017/"
 )  # Conectar al servidor MongoDB local
 db = cliente["hacienda"]  # Conectar a la base de datos "hacienda"
 collection = db["librodiario"]  # Conectar a la colección "librodiario"
 
-# Insertar los registros generados
+ Insertar los registros generados
 collection.insert_many(records)  # Insertar los registros en la colección
 
 print(f"{len(records)} registros han sido insertados en la colección 'librodiario'.")
