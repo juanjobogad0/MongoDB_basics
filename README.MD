@@ -2,7 +2,7 @@
 
 ### Operaciones CRUD
 ### Operaciones de consulta con `aggregate()`
-### Operdaores $match, $group, $lookup, $project, $sum y $sort
+### Operadores $match, $group, $lookup, $project, $sum y $sort
 
 ## LA BASE DE DATOS
 
