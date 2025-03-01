@@ -1,10 +1,10 @@
 # EJERCICIOS PARA PRACTICAR FUNCIONES Y OPERADORES DE MONGODB
 
-## Operaciones CRUD
-## Operaciones de consulta con `aggregate()`
-## Operdaores $match, $group, $lookup, $project, $sum y $sort
+### Operaciones CRUD
+### Operaciones de consulta con `aggregate()`
+### Operdaores $match, $group, $lookup, $project, $sum y $sort
 
-### LA BASE DE DATOS
+## LA BASE DE DATOS
 
 Simula 100 registros contables básicos de una empresa, conformada por dos colecciones:
 
