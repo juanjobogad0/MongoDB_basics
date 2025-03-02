@@ -1,17 +1,19 @@
-# EJERCICIOS PARA PRACTICAR FUNCIONES Y OPERADORES DE MONGODB
+# EXERCISES TO PRACTICE MONGODB FUNCTIONS AND OPERATORS
 
-### Operaciones CRUD
-### Operaciones de consulta con `aggregate()`
-### Operadores $match, $group, $lookup, $project, $sum y $sort
+### CRUD Operations  
+### Query operations with `aggregate()`  
+### Operators: $match, $group, $lookup, $project, $sum, and $sort  
 
-## LA BASE DE DATOS
+## THE DATABASE  
 
-Simula 100 registros contables básicos de una empresa, conformada por dos colecciones:
+It simulates 100 basic accounting records of a company, with two collections:  
 
-- **`librodiario`**: donde se encuentran todos los documentos con 100 registros contables random.
-- **`cuenta`**: donde se encuentran los nombres de las cuentas con su '_id', el cual tambien se encuentra como 'cuenta_id' en la coleccion **`librodiario`** .
- 
-Los documentos en la colección `librodiario` fueron generados con la biblioteca Faker. Comparto el código a continuación:
+- **`librodiario`**: contains all documents with 100 random accounting records.  
+- **`cuenta`**: contains the account names with their '_id', which is also found as 'cuenta_id' in the **`librodiario`** collection.  
+
+The documents in the `librodiario` collection were generated using the Faker library. Below is the code:
+
+
 
 ```python
 from faker import Faker
