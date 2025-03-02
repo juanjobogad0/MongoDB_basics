@@ -11,7 +11,7 @@ It simulates 100 basic accounting records for a company, consisting of two colle
 - **`librodiario`**: contains all documents with 100 random accounting records.  
 - **`cuenta`**: contains the account names with their '_id', which is also found as 'cuenta_id' in the **`librodiario`** collection.  
 
-The documents in the `librodiario` collection were generated using the Faker library. Below is the code:
+The documents in the `librodiario` collection were generated using the Faker library:
 
 
 
@@ -37,21 +37,21 @@ cuenta_ids = [
 # Generate a single record
 def generate_record():
     fecha_str = fake.date_between(start_date="-5y", end_date="today").strftime("%Y-%m-%d")
-    fecha_iso = datetime.strptime(fecha_str, "%Y-%m-%d")  # Convertir a datetime
+    fecha_iso = datetime.strptime(fecha_str, "%Y-%m-%d")  
     
     return {
         "fecha": fecha_iso,
-        "detalle": f"{fake.word()} {fake.word()}",  # Genera un detalle aleatorio (sustantivo + adjetivo)
+        "detalle": f"{fake.word()} {fake.word()}", 
         "monto": random.randint(100000, 100000000),
         "fact": "001" + str(random.randint(1000000, 9999999)),
-        "cuenta_id": random.choice(cuenta_ids),  # Selecciona aleatoriamente un cuenta_id
+        "cuenta_id": random.choice(cuenta_ids),  
     }
 
 # Generate 100 records
 records = [generate_record() for _ in range(100)]
 
 # Connecting to MongoDB
-cliente = MongoClient("mongodb://localhost:27017/")  # Conectar al servidor MongoDB local
+cliente = MongoClient("mongodb://localhost:27017/") 
 db = cliente["hacienda"]  
 collection = db["librodiario"]  
 
